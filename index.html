@@ -24,29 +24,36 @@
                     <h1 class="fw-bold mb-3" style="color: var(--bs-indigo)">The Company name</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, rem!</p>
                 </div>
-                <form action="" class="mt-1 mb-4">
-                    <div class="mb-3">
+                <form action="" class="mt-1 mb-4" id="signUpForm">
+                    <div class="mb-3 form-group">
                         <label for="name" class="form-label">Full Name</label>
-                        <input id="name" class="form-control form-control-lg" type="text" class="name" placeholder="Enter Full Name">
+                        <input id="name" class="form-control" type="text" placeholder="Enter Full Name" required minlength="4" custommaxlength="15">
+                        <p class="error text-danger mt-1 d-none"></p>
                     </div>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Email address</label>
-                        <input id="name" class="form-control form-control-lg" type="text" class="name" placeholder="Enter Full Name">
+                    <div class="mb-3 form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input id="email" class="form-control" type="text" placeholder="Enter Full Name" required pattern="^(.+)@(.+)$">
+                        <p class="error text-danger mt-1 d-none"></p>
                     </div>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Password</label>
-                        <input id="name" class="form-control form-control-lg" type="text" class="name" placeholder="Enter Full Name">
+                    <div class="mb-3 form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input id="password" class="form-control" type="password" placeholder="Enter Full Name" required minlength="8" custommaxlength="12">
+                        <p class="error text-danger mt-1 d-none"></p>
                     </div>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Confirm Password</label>
-                        <input id="name" class="form-control form-control-lg" type="text" class="name" placeholder="Enter Full Name">
+                    <div class="mb-3 form-group">
+                        <label for="c-password" class="form-label">Confirm Password</label>
+                        <input id="c-password" class="form-control" type="password" placeholder="Enter Full Name" required minlength="8" custommaxlength="12" match="password">
+                        <p class="error text-danger mt-1 d-none"></p>
                     </div>
+                    <button class="btn btn-primary btn-lg">Submit</button>
                 </form>
                 <div class="form-footer-text text-center border-top pt-3">
-                    <p>Already have an Account? <a class="btn btn-outline-dark py-1 px-3 bg-light d-inline-block ms-2" href="javascript:void">Sign In</a></p>
+                    <p>Already have an Account? <a class="btn btn-outline-secondary py-1 px-3 d-inline-block ms-2" href="javascript:void">Sign In</a></p>
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="./script.js"></script>
 </body>
 </html>
