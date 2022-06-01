@@ -57,4 +57,5 @@ img {
 .sub-container .form-container {
   position: relative;
   padding: 4.5%;
+  width: 100%;
 }
