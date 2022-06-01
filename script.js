@@ -63,8 +63,15 @@ const validateForm = formValidator => {
         }
     }
 
-    
+    // Removing default HTML validation
     formElement.setAttribute('noValidate', '');
+    
+    Array.from(formElement.elements).forEach(element => {
+        element.addEventListener('blur', (event) => {
+            validateSingleFormGroup(event.srcElement.parentElement)
+        })
+    })
+    
     formElement.addEventListener('submit', event => {
         event.preventDefault();
         validateAllFromGroups(formElement)
