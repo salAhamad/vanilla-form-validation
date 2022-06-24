@@ -58,4 +58,23 @@ img {
   position: relative;
   padding: 4.5%;
   width: 100%;
+  min-width: 420px;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    height: auto;
+  }
+  .sub-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sub-container .image-container {
+    max-width: 100%;
+  }
+  .sub-container .form-container {
+    min-width: 100%;
+  }
 }

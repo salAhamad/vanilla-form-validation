@@ -45,5 +45,16 @@ img { max-width: 100%;}
         position: relative;
         padding: 4.5%;
         width: 100%;
+        min-width: 420px;
     }
+}
+@media screen and (max-width: 767px) {
+    main {height: auto;}
+    .sub-container {
+        flex-direction: column;
+        .image-container { max-width: 100%; }
+        .form-container {
+            min-width: 100%;
+        }
+    }    
 }

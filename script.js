@@ -42,7 +42,6 @@ const validateForm = formValidator => {
         const input = formGroup.querySelector('input');
         const label = formGroup.querySelector('label');
         const error = formGroup.querySelector('.error');
-        const cpError = formGroup.querySelector('.c-password-error');
 
         let formGroupError = false;
 
@@ -68,7 +67,7 @@ const validateForm = formValidator => {
     
     Array.from(formElement.elements).forEach(element => {
         element.addEventListener('blur', (event) => {
-            validateSingleFormGroup(event.srcElement.parentElement)
+            validateSingleFormGroup(event.target.parentElement)
         })
     })
     
